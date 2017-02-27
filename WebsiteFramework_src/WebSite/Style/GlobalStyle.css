@@ -1,0 +1,18 @@
+﻿body{font-size: 12px;font-family: Arial, 宋体;}
+a:link{font-size: 12px;color: #696969;text-decoration: none;}
+a:visited{font-size: 12px;color: #696969;text-decoration: none;}
+a:hover{font-size: 12px;color: orange;text-decoration: underline;}
+a:active{font-size: 12px;color: orange;text-decoration: underline;}
+
+.UserName{font-weight: bold;font-size: 12px;color: white;}
+
+/* 小消息框样式定义 */
+#msg-div
+{
+	position: absolute;
+	right: 50%;
+	top: 10px;
+	width: 200px;
+	height: auto;
+	z-index: 20000;
+}

@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/252/trunk/RealTimeCommunicationServer_src/AspComet
+END
+IClientIDGenerator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IClientIDGenerator.cs
+END
+MessageConverter.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/MessageConverter.cs
+END
+ICometAsyncResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/ICometAsyncResult.cs
+END
+Client.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Client.cs
+END
+IClientFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IClientFactory.cs
+END
+IMessagesProcessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IMessagesProcessor.cs
+END
+MessageHandlerResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/201/trunk/RealTimeCommunicationServer_src/AspComet/MessageHandlerResult.cs
+END
+AspComet.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/252/trunk/RealTimeCommunicationServer_src/AspComet/AspComet.csproj.user
+END
+IMessageHandlerFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IMessageHandlerFactory.cs
+END
+Message.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Message.cs
+END
+IClient.cs
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IClient.cs
+END
+IClientRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IClientRepository.cs
+END
+IMessageHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IMessageHandler.cs
+END
+InMemoryClientRepository.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/InMemoryClientRepository.cs
+END
+MessageBus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/MessageBus.cs
+END
+Setup.cs
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Setup.cs
+END
+RngUniqueClientIDGenerator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/RngUniqueClientIDGenerator.cs
+END
+ServiceMetadata.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/ServiceMetadata.cs
+END
+MessageExtensions.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/MessageExtensions.cs
+END
+CometAsyncResult.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/CometAsyncResult.cs
+END
+ITransport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/ITransport.cs
+END
+CometHttpHandler.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/CometHttpHandler.cs
+END
+AspComet.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/252/trunk/RealTimeCommunicationServer_src/AspComet/AspComet.csproj
+END
+ClientFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/ClientFactory.cs
+END
+MessagesProcessor.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/201/trunk/RealTimeCommunicationServer_src/AspComet/MessagesProcessor.cs
+END
+IMessageBus.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/IMessageBus.cs
+END
+ChannelName.cs
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/ChannelName.cs
+END
+Lookup.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Lookup.cs
+END
+MessageHandlerFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/MessageHandlerFactory.cs
+END

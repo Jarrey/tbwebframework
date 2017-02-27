@@ -1,0 +1,44 @@
+using AspComet.Eventing;
+
+namespace AspComet.MessageHandlers
+{
+    public class MetaDisconnectHandler : IMessageHandler
+    {
+        private readonly IClientRepository clientRepository;
+
+        public MetaDisconnectHandler(IClientRepository clientRepository)
+        {
+            this.clientRepository = clientRepository;
+        }
+
+        public string ChannelName
+        {
+            get { return "/meta/disconnect"; }
+        }
+
+        public MessageHandlerResult HandleMessage(Message request)
+        {
+            Client client = clientRepository.GetByID(request.clientId);
+            var e = new DisconnectedEvent(client);
+            EventHub.Publish(e);
+
+            clientRepository.RemoveByID(client.ID);
+
+            Message[] message =
+            {
+              new Message
+                  {
+                      id = request.id,
+                      channel = this.ChannelName,
+                      successful = true,
+                      clientId = request.clientId
+                  }
+            };
+            return new MessageHandlerResult
+            {
+              Message = message,
+                ShouldWait = false
+            };
+        }
+    }
+}

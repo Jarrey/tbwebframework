@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd
+END
+StatusProxy.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/StatusProxy.js
+END
+Registry.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/Registry.js
+END
+DragTracker.js
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/DragTracker.js
+END
+DragZone.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/DragZone.js
+END
+ScrollManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/ScrollManager.js
+END
+DropTarget.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/DropTarget.js
+END
+DragSource.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/DragSource.js
+END
+DDCore.js
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/DDCore.js
+END
+DropZone.js
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/WebSite/Extjs_lib/src/dd/DropZone.js
+END

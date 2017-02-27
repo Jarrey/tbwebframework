@@ -1,0 +1,28 @@
+﻿.IconMessage_L {background-image: url(icon_01_message_L.png);
+	width: 48px;
+	height: 48px;
+}
+.IconWaining_L {background-image: url(icon_02_waining_L.png);
+	width: 48px;
+	height: 48px;
+}
+.IconQuestion_L {background-image: url(icon_03_question_L.png);
+	width: 48px;
+	height: 48px;
+}
+.IconError_L {background-image: url(icon_04_error_L.png);
+	width: 48px;
+	height: 48px;
+}
+.IconError_S {background-image: url(icon_04_error_S.png);
+	width: 16px;
+	height: 16px;
+}
+.IconSearch_S {background-image: url(icon_05_search_S.png);
+	width: 16px;
+	height: 16px;
+}
+.IconUpdate_S {background-image: url(icon_06_update_S.png);
+	width: 16px;
+	height: 16px;
+}

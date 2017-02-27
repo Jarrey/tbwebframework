@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseServer
+END
+clsSystemMessageMonitorServer.vb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseServer/clsSystemMessageMonitorServer.vb
+END
+ResponseServer.vbproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseServer/ResponseServer.vbproj.user
+END
+ResponseServer.vbproj.vs10x
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseServer/ResponseServer.vbproj.vs10x
+END
+ResponseServer.vbproj
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseServer/ResponseServer.vbproj
+END
+clsExceptionManagerServer.vb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/228/trunk/WebsiteFramework_src/ResponseServer/clsExceptionManagerServer.vb
+END
+clsBaseServer.vb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseServer/clsBaseServer.vb
+END
+clsLogManagerServer.vb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/228/trunk/WebsiteFramework_src/ResponseServer/clsLogManagerServer.vb
+END
+clsManagerMainServer.vb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/228/trunk/WebsiteFramework_src/ResponseServer/clsManagerMainServer.vb
+END

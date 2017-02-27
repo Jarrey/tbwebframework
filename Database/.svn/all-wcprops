@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 32
+/svn/!svn/ver/250/trunk/Database
+END
+backup_data.bat
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/svn/!svn/ver/244/trunk/Database/backup_data.bat
+END
+sqlite3.exe
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/244/trunk/Database/sqlite3.exe
+END
+RunScript.sql
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/244/trunk/Database/RunScript.sql
+END
+DB.Dat
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/250/trunk/Database/DB.Dat
+END

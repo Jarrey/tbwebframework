@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DataBase>
+  <!--
+  DBFileName : 数据库文件名
+  DBFilePath : 数据库在服务器物理路径
+  -->
+  <DBFileName>DB.dat</DBFileName>
+  <DBFilePath>C:\Documents and Settings\Jar\桌面\tbwebframework\Framework\WebSite\Database\</DBFilePath>
+</DataBase>

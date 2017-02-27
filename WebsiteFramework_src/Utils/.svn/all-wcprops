@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Utils
+END
+Utils.vbproj.vs10x
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Utils/Utils.vbproj.vs10x
+END
+Utils.vbproj
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Utils/Utils.vbproj
+END
+clsSharedMemory.vb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/Utils/clsSharedMemory.vb
+END
+clsExport.vb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/Utils/clsExport.vb
+END
+Utils.vbproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Utils/Utils.vbproj.user
+END
+clsXMLConfig.vb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/Utils/clsXMLConfig.vb
+END

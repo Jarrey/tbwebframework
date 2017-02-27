@@ -1,0 +1,16 @@
+<%-- 
+Name: Manager Server Aspx File
+Author: Jar.Bob
+Description: 
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="VB.net" Description="Generates a empty ExtJs JavaScript file" %>
+<%@ Property Name="Author" Type="System.String" Default="" Optional="True" Category="Information" Description="Author" %>
+<%@ Property Name="Name" Type="System.String" Default="Empty Manager Page" Category="Information" Description="The class name" %>
+
+<%%@ Page Language="vb" AutoEventWireup="false" CodeBehind="<%= Name.Replace(" ",string.Empty) %>Server.aspx.vb" Inherits="WebSite.<%= Name.Replace(" ",string.Empty) %>Server" %>
+<%%@ Import Namespace="Manage" %>
+<%%@ Import Namespace="ResponseServer" %>
+<%% 
+  Dim lObjcls<%= Name.Replace(" ",string.Empty) %>Server As New cls<%= Name.Replace(" ",string.Empty) %>Server
+  lObjcls<%= Name.Replace(" ",string.Empty) %>Server.mProcessRequest(Request, Response)
+%>

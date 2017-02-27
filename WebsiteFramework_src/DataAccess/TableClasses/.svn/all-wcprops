@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/250/trunk/WebsiteFramework_src/DataAccess/TableClasses
+END
+clsTB_USER_DTLS.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_DTLS.Helper.vb
+END
+clsTB_LANG_DICTIONARY.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_LANG_DICTIONARY.Helper.vb
+END
+clsTB_MESSAGE_DICTIONARY.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_MESSAGE_DICTIONARY.Helper.vb
+END
+clsTB_USER_LOGIN_DTLS.vb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_LOGIN_DTLS.vb
+END
+clsTB_COLUMN_FILTER_MANAGER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/250/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_COLUMN_FILTER_MANAGER.vb
+END
+clsTB_USER_DTLS.vb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_DTLS.vb
+END
+clsTB_SYSTEM_MESSAGE.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_SYSTEM_MESSAGE.Helper.vb
+END
+clsTB_LANG_DICTIONARY.vb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_LANG_DICTIONARY.vb
+END
+clsTB_EXCEPTION_MANAGER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_EXCEPTION_MANAGER.Helper.vb
+END
+clsTB_FILE_MANAGER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_FILE_MANAGER.vb
+END
+clsTB_LOG_MANAGER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/212/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_LOG_MANAGER.vb
+END
+clsTB_USER_CUSTOM_DTLS.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_CUSTOM_DTLS.Helper.vb
+END
+clsTB_MENU_MANAGER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/232/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_MENU_MANAGER.Helper.vb
+END
+clsTB_COLUMN_MODEL.vb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/250/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_COLUMN_MODEL.vb
+END
+clsTB_CODE_MASTER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_CODE_MASTER.vb
+END
+clsTB_COLUMN_DATA_READER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_COLUMN_DATA_READER.Helper.vb
+END
+clsTB_FILE_MANAGER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_FILE_MANAGER.Helper.vb
+END
+clsTB_SYSTEM_MESSAGE.vb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_SYSTEM_MESSAGE.vb
+END
+clsTB_EXCEPTION_MANAGER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_EXCEPTION_MANAGER.vb
+END
+clsTB_LOG_MANAGER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/212/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_LOG_MANAGER.Helper.vb
+END
+clsTB_PARAMETER_MASTER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_PARAMETER_MASTER.vb
+END
+clsTB_COLUMN_MODEL.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/210/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_COLUMN_MODEL.Helper.vb
+END
+clsTB_USER_CUSTOM_DTLS.vb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_CUSTOM_DTLS.vb
+END
+clsTB_MENU_MANAGER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_MENU_MANAGER.vb
+END
+clsTB_USER_DTLS_MAP.vb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_DTLS_MAP.vb
+END
+clsTB_CODE_MASTER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_CODE_MASTER.Helper.vb
+END
+clsTB_COLUMN_DATA_READER.vb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_COLUMN_DATA_READER.vb
+END
+clsTB_MESSAGE_DICTIONARY.vb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_MESSAGE_DICTIONARY.vb
+END
+clsTB_PARAMETER_MASTER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/!svn/ver/240/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_PARAMETER_MASTER.Helper.vb
+END
+clsTB_COLUMN_FILTER_MANAGER.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_COLUMN_FILTER_MANAGER.Helper.vb
+END
+clsTB_USER_LOGIN_DTLS.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_LOGIN_DTLS.Helper.vb
+END
+clsTB_USER_DTLS_MAP.Helper.vb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/DataAccess/TableClasses/clsTB_USER_DTLS_MAP.Helper.vb
+END

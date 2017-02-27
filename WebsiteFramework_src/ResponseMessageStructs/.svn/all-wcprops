@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseMessageStructs
+END
+clsExceptionMessageStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsExceptionMessageStruct.vb
+END
+clsColumnFilterStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsColumnFilterStruct.vb
+END
+clsLogMessagrStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsLogMessagrStruct.vb
+END
+clsResponseMessageStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/ResponseMessageStructs/clsResponseMessageStruct.vb
+END
+IResponseMessage.vb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/ResponseMessageStructs/IResponseMessage.vb
+END
+clsParametersMessageStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsParametersMessageStruct.vb
+END
+clsMenuMessageStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsMenuMessageStruct.vb
+END
+clsLanguageDictionaryStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/216/trunk/WebsiteFramework_src/ResponseMessageStructs/clsLanguageDictionaryStruct.vb
+END
+clsColumnDataReaderStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsColumnDataReaderStruct.vb
+END
+clsMessageDictionaryStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/216/trunk/WebsiteFramework_src/ResponseMessageStructs/clsMessageDictionaryStruct.vb
+END
+clsColumnModelStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsColumnModelStruct.vb
+END
+ResponseMessageStructs.vbproj
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseMessageStructs/ResponseMessageStructs.vbproj
+END
+clsGridViewDefinationStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/ResponseMessageStructs/clsGridViewDefinationStruct.vb
+END
+clsCodeMasterStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsCodeMasterStruct.vb
+END
+clsBaseResponseMessage.vb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsBaseResponseMessage.vb
+END
+clsSystemMessageStruct.vb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/ResponseMessageStructs/clsSystemMessageStruct.vb
+END
+ResponseMessageStructs.vbproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseMessageStructs/ResponseMessageStructs.vbproj.user
+END
+ResponseMessageStructs.vbproj.vs10x
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/ResponseMessageStructs/ResponseMessageStructs.vbproj.vs10x
+END

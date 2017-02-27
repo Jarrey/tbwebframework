@@ -1,0 +1,127 @@
+<%@ CodeTemplate Language="C#" TargetLanguage="VB.Net#" Description="This Template Generates C# domain objects for TablClass" Debug="true" %>
+<%@ Property Name="Namespace" Type="System.String" Default="MyNamespace.Data" Category="Object" Description="The class namespace that the mapping file should use" %>
+<%@ Property Name="Author" Type="System.String" Default="" Optional="True" Category="Information" Description="Author" %>
+<%@ Property Name="SystemDB" Type="System.Boolean" Default="true" Category="Object" Description="System Database or User Database" %>
+<%@ Property Name="HleperFile" Type="System.Boolean" Default="true" Category="Object" Description="Create .Hleper File" %>
+<%@ Assembly Name="System.Design" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.IO" %>
+<%@ Import Namespace="System.Xml" %>
+<%@ Import Namespace="System.Text" %>
+<script runat="template">
+  private DatabaseSchema _sourceDatabase;
+	private string _outputDirectory;
+  private bool _implementNotification = true;
+
+	private CodeTemplate _ClassTemplate;
+	private CodeTemplate _HelperTemplate;
+
+    [Category("Database")]
+    [Description("Database that the mapping file should be based on.")]
+    public DatabaseSchema SourceDatabase {
+        get { return _sourceDatabase; }
+        set { _sourceDatabase = value; }
+    }
+
+	[Editor(typeof(System.Windows.Forms.Design.FolderNameEditor), typeof(System.Drawing.Design.UITypeEditor))]
+	[Category("Class")]
+    [Description("The folder to save the generated class files.")]
+	public string OutputDirectory
+	{
+		get {return _outputDirectory;}
+		set {_outputDirectory= value;}
+	}
+
+	[Browsable(false)]
+	public CodeTemplate ClassTemplate
+	{
+		get
+		{
+			if (_ClassTemplate == null)
+				_ClassTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "TableClassCodeSmithTemplate\\VB_TableCalss.Class.cst");
+
+			return _ClassTemplate;
+		}
+	}
+
+	[Browsable(false)]
+	public CodeTemplate HelperTemplate
+	{
+		get
+		{
+			if (_HelperTemplate == null)
+				_HelperTemplate = CompileTemplate(CodeTemplateInfo.DirectoryName + "TableClassCodeSmithTemplate\\VB_TableCalss.Helper.cst");
+
+			return _HelperTemplate;
+		}
+	}
+
+	public CodeTemplate CompileTemplate(string templateName)
+	{
+		CodeTemplateCompiler compiler = new CodeTemplateCompiler(templateName);
+		compiler.Compile();
+
+		if (compiler.Errors.Count == 0)
+		{
+			return compiler.CreateInstance();
+		}
+		else
+		{
+			for (int i = 0; i < compiler.Errors.Count; i++)
+			{
+				Response.WriteLine(compiler.Errors[i].ToString());
+			}
+			return null;
+		}
+
+	}
+
+	public void Generate()
+	{
+		foreach(TableSchema sourceTable in SourceDatabase.Tables)
+		{
+			Response.WriteLine(string.Format("Processing Table {0} ... ", sourceTable.Name));
+			
+			try
+			{
+			string className = sourceTable.Name;
+
+			string classFileName = "cls" + className + ".vb";
+			classFileName = Path.Combine(OutputDirectory, classFileName);
+
+			this.ClassTemplate.SetProperty("SourceTable", sourceTable);
+			this.ClassTemplate.SetProperty("Namespace", Namespace);
+            this.ClassTemplate.SetProperty("Author", Author);
+            this.ClassTemplate.SetProperty("SystemDB", SystemDB);
+
+			this.ClassTemplate.RenderToFile(classFileName, true);
+
+			Response.WriteLine(string.Format("\t\t{0} ", classFileName));
+
+			if (HleperFile == true)
+			{
+				string helperFileName = "cls" + className + ".Helper.vb";
+				helperFileName = Path.Combine(OutputDirectory, helperFileName);
+	
+				this.HelperTemplate.SetProperty("SourceTable", sourceTable);
+				this.HelperTemplate.SetProperty("Namespace", Namespace);
+	            this.HelperTemplate.SetProperty("Author", Author);
+	            this.HelperTemplate.SetProperty("SystemDB", SystemDB);
+	
+				this.HelperTemplate.RenderToFile(helperFileName, true);
+	
+				Response.WriteLine(string.Format("\t\t{0} ", helperFileName));
+			}
+
+			}
+			catch (Exception ex)
+			{
+				Response.WriteLine("Error: " + ex);
+			}
+		
+		}
+	}    
+    
+</script>
+<% this.Generate();  %>

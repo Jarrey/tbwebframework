@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Manage
+END
+clsExceptionManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/215/trunk/WebsiteFramework_src/Manage/clsExceptionManager.vb
+END
+clsColumnDefinationManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/Manage/clsColumnDefinationManager.vb
+END
+clsParameterManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/Manage/clsParameterManager.vb
+END
+clsLogManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/215/trunk/WebsiteFramework_src/Manage/clsLogManager.vb
+END
+Manage.vbproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Manage/Manage.vbproj.user
+END
+clsMeunManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/Manage/clsMeunManager.vb
+END
+clsCodeMasterManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/Manage/clsCodeMasterManager.vb
+END
+Manage.vbproj
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Manage/Manage.vbproj
+END
+Manage.vbproj.vs10x
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/252/trunk/WebsiteFramework_src/Manage/Manage.vbproj.vs10x
+END
+clsSystemMessageManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/251/trunk/WebsiteFramework_src/Manage/clsSystemMessageManager.vb
+END
+clsLanguageDictionaryManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/245/trunk/WebsiteFramework_src/Manage/clsLanguageDictionaryManager.vb
+END
+clsMessageDictionaryManager.vb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/209/trunk/WebsiteFramework_src/Manage/clsMessageDictionaryManager.vb
+END

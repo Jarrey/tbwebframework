@@ -1,0 +1,53 @@
+<%-- 
+Name: Manager Aspx File
+Author: Jar.Bob
+Description: 
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="VB.net" Description="Generates a empty ExtJs JavaScript file" %>
+<%@ Property Name="Author" Type="System.String" Default="" Optional="True" Category="Information" Description="Author" %>
+<%@ Property Name="Name" Type="System.String" Default="Empty Manager Page" Category="Information" Description="The class name" %>
+
+// Author  : <%= Author %>
+// Date    : <%= DateTime.Now %>
+// Synopsis: The ExtJs JavaScript for <% =Name %>
+
+// ?????????
+Ext.BLANK_IMAGE_URL = '../../Extjs_lib/resources/images/default/s.gif';
+Ext.onReady(function(){Ext.QuickTips.init()}); 
+
+// ??????
+Ext.namespace('<%= Name.Replace(" ",string.Empty) %>');
+
+// ??????
+<%= Name.Replace(" ",string.Empty) %>.app = function() {
+  
+  // ????
+  var mRequest                     = new jsClsRequest("<%= Name.Replace(" ",string.Empty) %>Server.aspx"); //Ajax????
+    
+  // ????
+  // ???
+  var initControlsByLocal = function(){
+  
+  };
+  
+  //????????????
+  var initControlsByServer = function(){
+  
+  };
+  
+  //????
+    
+  //????
+  
+  // ????
+  return {
+    // ????
+    
+    // ????
+    init: function(){
+      initControlsByLocal();
+      initControlsByServer();
+    }
+  };
+}();
+Ext.onReady(<%= Name.Replace(" ",string.Empty) %>.app.init, <%= Name.Replace(" ",string.Empty) %>.app); 

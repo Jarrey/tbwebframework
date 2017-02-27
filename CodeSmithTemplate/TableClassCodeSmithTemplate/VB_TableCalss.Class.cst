@@ -1,0 +1,301 @@
+<%-- 
+Name: TableClass
+Author: Jar.Bob
+Description: 
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="VB.net" Description="Generates a Table Class" %>
+<%@ Property Name="Author" Type="System.String" Default="" Optional="True" Category="Information" Description="Author" %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the mapping file is based on" %>
+<%@ Property Name="SystemDB" Type="System.Boolean" Default="true" Category="Object" Description="System Database or User Database" %>
+<%@ Property Name="Namespace" Type="System.String" Default="MyNamespace.Data" Category="Object" Description="The class namespace that the mapping file should use" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Assembly Name="System.Data" %>
+<%@ Import Namespace="SchemaExplorer" %>
+<%@ Import Namespace="System.Data" %>
+<%@ Import Namespace="System.Text.RegularExpressions" %>
+
+#Region "CLASS HEADER INFORMATION"
+'************************************************************************'
+'*                H E A D E R  I N F O R M A T I O N  B O X             *'
+'************************************************************************'
+'************************************************************************'
+'*   Author       : <%= Author %>
+'*   Date         : <%= DateTime.Now %>
+'*   Synopsis     : Table Class for Table 
+'*                          <%= SourceTable.Database %> / <%= SourceTable.Name %>
+'*
+'*   Modifications:
+'************************************************************************'
+'* Date       Author Mod. FTR No. Description                           *'
+'* ---------- ------ ---- ------- ------------------------------------- *'
+'*
+'*
+'* ---------- ------ ---- ------- ------------------------------------- *'
+'************************************************************************'
+#End Region
+
+#Region "SYSTEM NAMESPACES"
+Imports System.Data.Common
+Imports System.Data.SQLite
+#End Region
+
+Namespace <%= Namespace %>
+
+  Public Class cls<%= SourceTable.Name %>
+    Inherits clsDataAccess
+    
+#Region "CLASS DATABASE COLUMNS"
+
+<% foreach(ColumnSchema column in SourceTable.Columns) { %>
+		Private <%= MemberName(column) %> As <%= MemberType(column) %>
+<% } %>
+   
+#End Region
+
+#Region "CLASS PROPERTIES"
+
+<% foreach(ColumnSchema column in SourceTable.Columns) { %>
+    Public Property <%= PropertyName(column) %>() As <%= MemberType(column) %>
+      Get
+        Return <%= MemberName(column) %>
+      End Get
+      Set(ByVal value As <%= MemberType(column) %>)
+        <%= MemberName(column) %> = value
+      End Set
+    End Property
+        
+<% } %>
+    
+#End Region
+   
+#Region "CLASS CONSTRUCTOR"
+
+<% if (SystemDB == false) { %>
+    Public Sub New(ByVal aStrDataBaseFilePath As String)
+      mPrpConnectionDB = clsConnectionManager.enmConnectionDB.USER_DB
+      mPrpDataBaseFilePath = aStrDataBaseFilePath
+<% }else{ %>
+    Public Sub New()
+      mPrpConnectionDB = clsConnectionManager.enmConnectionDB.SYSTEM_DB
+<%} %>
+      mPrInitializeData()
+    End Sub
+
+    Private Sub mPrInitializeData()
+<% foreach(ColumnSchema column in SourceTable.Columns) { %>
+	  <%= MemberName(column) %> = <%= InitializeType(column) %>
+<% } %>
+    End Sub
+
+#End Region
+
+#Region "CLASS MEMBER FUNCTIONS"
+
+#Region "SELECT"
+
+    Private Sub mPrSelect(ByRef aObjDataTarget As Object, Optional ByVal aEnmReturnIndc As enmReturnIndc = enmReturnIndc.DATA_SET)
+
+      Dim lStrSQLString As String
+      lStrSQLString = _
+        "Select " & _
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i++) { 
+    if (i == 0) {%>        "  [<%= SourceTable.Columns[i].Name %>] " & _<%}else{%>        ", [<%= SourceTable.Columns[i].Name %>] " & _<%}%>
+<% } %>
+        "From [<%= SourceTable.Name %>] " & _
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i ++) { 
+        if (SourceTable.Columns[i].IsPrimaryKeyMember == true) {
+        if (i == 0) {%>
+        "Where " & _
+        " [<%= SourceTable.Columns[i].Name %>] = " & <%= MemberName(SourceTable.Columns[i])%>.ToString() & _
+        <%}else{%>
+        " And [<%= SourceTable.Columns[i].Name %>] = " & <%= MemberName(SourceTable.Columns[i])%>.ToString() & _
+        <%}}}%> 
+        ""
+
+      If aEnmReturnIndc = enmReturnIndc.DATA_SET Then
+        aObjDataTarget = mFnExecuteQueryAsDataSet(lStrSQLString)
+      ElseIf aEnmReturnIndc = enmReturnIndc.DATA_READER Then
+        aObjDataTarget = mFnExecuteQueryAsDataReader(lStrSQLString)
+      End If
+
+    End Sub
+
+#End Region
+
+#Region "COUNT RECORDS"
+
+		Public Function mFnCount() As Integer
+      Dim lStrSQLString As String
+      
+      lStrSQLString = _
+      	"Select Count(*) From [<%= SourceTable.Name %>]"
+      	
+      Return mFnExecuteScalar(lStrSQLString)
+    End Function
+
+#End Region
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i ++) { 
+        if (SourceTable.Columns[i].IsPrimaryKeyMember == true && IsIntType(SourceTable.Columns[i])) {%>
+
+#Region "MAX ID"
+
+		Public Function mFnMaxId() As Integer
+      Dim lStrSQLString As String
+
+      lStrSQLString = _
+      	"Select Max([<% =SourceTable.Columns[i].Name %>]) From [<% =SourceTable.Name %>]"
+
+      If IsDbNull(mFnExecuteScalar(lStrSQLString)) Then Return 0 Else Return mFnExecuteScalar(lStrSQLString)
+    End Function
+
+#End Region
+<% 
+            break;
+        }
+    }
+%>
+
+#Region "INSERT"
+
+    Public Function mFnInsert() As Integer
+      Dim lStrSQLString As String
+
+      lStrSQLString = _
+        "Insert Into [<%= SourceTable.Name %>] (" & _
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i++) { 
+    if (i == 0) {%>        "  [<%= SourceTable.Columns[i].Name %>] " & _<%}else{%>        ", [<%= SourceTable.Columns[i].Name %>] " & _<%}%>
+<% } %>
+        " ) Values ( " & _
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i++) { 
+    if (i == 0) {%>         <%= InsertMember(SourceTable.Columns[i]) %> & _<%}else{%>        ", " & <%= InsertMember(SourceTable.Columns[i]) %> & _<%}%>
+<% } %>
+        ")"
+
+      Return mFnExecuteNonQuery(lStrSQLString)
+    End Function
+
+#End Region
+
+#Region "UPDATE"
+
+    Public Function mFnUpdate() As Integer
+
+      Dim lStrSQLString As String
+      lStrSQLString = _
+        "Update [<%= SourceTable.Name %>] Set " & _
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i++) { 
+    if (i == 0) {%>        "  [<%= SourceTable.Columns[i].Name %>] = " & <%= InsertMember(SourceTable.Columns[i]) %> & _<%}else{%>        ", <%= SourceTable.Columns[i].Name %> = " & <%= InsertMember(SourceTable.Columns[i]) %> & _<%}%>
+<% } %>
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i ++) { 
+        if (SourceTable.Columns[i].IsPrimaryKeyMember == true) {
+        if (i == 0) {%>
+        " Where " & _
+        " [<%= SourceTable.Columns[i].Name %>] = " & <%= MemberName(SourceTable.Columns[i])%>.ToString() & _
+        <%}else{%>
+        " And [<%= SourceTable.Columns[i].Name %>] = " & <%= MemberName(SourceTable.Columns[i])%>.ToString() & _
+        <%}}}%> 
+        ""
+
+      Return mFnExecuteNonQuery(lStrSQLString)
+
+    End Function
+
+#End Region
+
+#Region "DELETE"
+
+    Public Function mFnDelete() As Integer
+
+      Dim lStrSQLString As String
+      lStrSQLString = _
+        "Delete From [<%= SourceTable.Name %>] " & _
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i ++) { 
+        if (SourceTable.Columns[i].IsPrimaryKeyMember == true) {
+        if (i == 0) {%>
+        "Where " & _
+        " [<%= SourceTable.Columns[i].Name %>] = " & <%= MemberName(SourceTable.Columns[i])%>.ToString() & _
+        <%}else{%>
+        " And [<%= SourceTable.Columns[i].Name %>] = " & <%= MemberName(SourceTable.Columns[i])%>.ToString() & _
+        <%}}}%> 
+        ""
+
+      Return mFnExecuteNonQuery(lStrSQLString)
+
+    End Function
+
+#End Region
+
+#Region "DELETE ALL"
+
+    Public Function mFnDeleteAll() As Integer
+
+      Dim lStrSQLString As String
+
+      lStrSQLString = "Delete from [<%= SourceTable.Name %>] "
+
+      Return mFnExecuteNonQuery(lStrSQLString)
+
+    End Function
+#End Region
+
+#Region "SELECT ALL"
+
+    Private Sub mPrSelectAll(ByRef aObjDataTarget As Object, Optional ByVal aEnmReturnIndc As enmReturnIndc = enmReturnIndc.DATA_SET)
+
+      Dim lStrSQLString As String
+
+      lStrSQLString = _
+        "Select " & _
+<% for(int i = 0 ; i < SourceTable.Columns.Count ; i++) { 
+    if (i == 0) {%>        "  [<%= SourceTable.Columns[i].Name %>] " & _<%}else{%>        ", [<%= SourceTable.Columns[i].Name %>] " & _<%}%>
+<% } %>
+        "From [<%= SourceTable.Name %>]"
+
+      If aEnmReturnIndc = enmReturnIndc.DATA_SET Then
+        aObjDataTarget = mFnExecuteQueryAsDataSet(lStrSQLString)
+      ElseIf aEnmReturnIndc = enmReturnIndc.DATA_READER Then
+        aObjDataTarget = mFnExecuteQueryAsDataReader(lStrSQLString)
+      End If
+
+    End Sub
+
+#End Region
+
+#Region "POPULATE ALL"
+
+    Private Sub mPrPopulateAll(ByVal aObjDataReader As SQLiteDataReader)
+<% foreach(ColumnSchema column in SourceTable.Columns) { %>
+      <%= MemberName(column) %> = mFnPopulate(aObjDataReader,"<%= column.Name %>")
+<% } %>
+    End Sub
+
+#End Region
+
+#Region "CLEAR DB ENTITIES"
+
+    Public Sub mPrClearDBEntities()
+<% foreach(ColumnSchema column in SourceTable.Columns) { %>
+	  <%= MemberName(column) %> = <%= InitializeType(column) %>
+<% } %>
+    End Sub
+
+#End Region
+
+#Region "GET DATA TABLE"
+
+    Public Function mFnGetEmptyDataTable() As DataTable
+      Dim lObjRtnDataTable As DataTable = New DataTable
+<% foreach(ColumnSchema column in SourceTable.Columns) { %>
+			lObjRtnDataTable.Columns.Add(New DataColumn("<%= column.Name %>", GetType(<%= MemberType(column) %>)))
+<% } %>
+      Return lObjRtnDataTable
+    End Function
+    
+#End Region
+
+#End Region
+
+  End Class
+
+End Namespace
+<!-- #include file="VB_TableClass.inc" -->

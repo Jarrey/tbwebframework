@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/203/trunk/RealTimeCommunicationServer_src/AspComet/Eventing
+END
+SubscribingEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/SubscribingEvent.cs
+END
+EventHub.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/EventHub.cs
+END
+ICancellableEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/ICancellableEvent.cs
+END
+HandshakingEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/HandshakingEvent.cs
+END
+DisconnectedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/DisconnectedEvent.cs
+END
+PublishingEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/200/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/PublishingEvent.cs
+END
+HandshakenEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/HandshakenEvent.cs
+END
+CancellableEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/CancellableEvent.cs
+END
+SubscribedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/SubscribedEvent.cs
+END
+ConnectingEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/!svn/ver/203/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/ConnectingEvent.cs
+END
+UnsubscribedEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/UnsubscribedEvent.cs
+END
+IEvent.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Eventing/IEvent.cs
+END

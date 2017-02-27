@@ -1,0 +1,13 @@
+<div style="fonst-size:10px;width: 100%"><p style="font-style: italic">2010-01-25 09:50:31</p><p style="color: red">[EXCEPTION]</p>System.Collections.Generic.KeyNotFoundException: 给定关键字不在字典中。
+   在 System.ThrowHelper.ThrowKeyNotFoundException()
+   在 System.Collections.ObjectModel.KeyedCollection`2.get_Item(TKey key)
+   在 AspComet.InMemoryClientRepository.GetByID(String clientID)
+   在 AspComet.MessageHandlers.MetaDisconnectHandler.HandleMessage(Message request)
+   在 AspComet.MessagesProcessor.Process(Message message)
+   在 AspComet.MessagesProcessor.Process(IEnumerable`1 messages)
+   在 AspComet.MessageBus.CreateProcessorAndProcess(IEnumerable`1 messages)
+   在 AspComet.MessageBus.HandleMessages(Message[] messages, CometAsyncResult asyncResult)
+   在 AspComet.CometHttpHandler.BeginProcessRequest(HttpContextBase context, AsyncCallback callback, Object asyncState)
+   在 AspComet.CometHttpHandler.BeginProcessRequest(HttpContext context, AsyncCallback callback, Object asyncState)
+   在 System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   在 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)</div>-----------------------------

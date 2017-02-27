@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Transports
+END
+CallbackPollingTransport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Transports/CallbackPollingTransport.cs
+END
+LongPollingTransport.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/AspComet/Transports/LongPollingTransport.cs
+END

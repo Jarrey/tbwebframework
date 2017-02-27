@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/!svn/ver/252/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer
+END
+BadLanguageBlocker.cs
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/BadLanguageBlocker.cs
+END
+ServerConfig.cs
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/!svn/ver/203/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/ServerConfig.cs
+END
+HandshakeAuthenticator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/HandshakeAuthenticator.cs
+END
+AuthenticatedClient.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/AuthenticatedClient.cs
+END
+clsSystemMessageServer.cs
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/!svn/ver/236/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/clsSystemMessageServer.cs
+END
+RealTimeCommunicationServer.csproj.user
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/!svn/ver/252/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/RealTimeCommunicationServer.csproj.user
+END
+AutofacServiceLocator.cs
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/AutofacServiceLocator.cs
+END
+AuthenticatedClientFactory.cs
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/AuthenticatedClientFactory.cs
+END
+SubscriptionChecker.cs
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/!svn/ver/199/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/SubscriptionChecker.cs
+END
+RealTimeCommunicationServer.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/!svn/ver/252/trunk/RealTimeCommunicationServer_src/RealTimeCommunicationServer/RealTimeCommunicationServer.csproj
+END

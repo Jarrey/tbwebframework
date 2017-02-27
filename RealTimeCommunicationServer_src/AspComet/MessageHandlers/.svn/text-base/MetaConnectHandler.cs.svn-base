@@ -1,0 +1,105 @@
+using System.Collections.Generic;
+using System.Collections;
+using AspComet.Eventing;
+
+namespace AspComet.MessageHandlers
+{
+  public class MetaConnectHandler : IMessageHandler
+  {
+    private readonly IClientRepository clientRepository;
+
+    public MetaConnectHandler(IClientRepository clientRepository)
+    {
+      this.clientRepository = clientRepository;
+    }
+
+    public MessageHandlerResult HandleMessage(Message request)
+    {
+
+      if (!ClientExistsFor(request))
+      {
+        return new MessageHandlerResult { Message = GetUnrecognisedClientResponse(request), ShouldWait = false };
+      }
+
+      Client client = clientRepository.GetByID(request.clientId);
+
+      bool isFirstConnectRequest = !client.IsConnected;
+
+      client.NotifyConnected();
+
+      //处理服务端推入消息
+      //修改：jar on 2010-01-25
+      Message[] requestMessage = { request };
+      Message[] responseMessage = null;
+      ConnectingEvent e = new ConnectingEvent(requestMessage);
+      EventHub.Publish(e);
+
+      if (e.Cancel)
+      {
+        ArrayList messageList = new ArrayList();
+        messageList.Add(GetSuccessfulResponse(request)[0]);
+        foreach (Message message in e.Message)
+        {
+          messageList.Add(message);
+        };
+        responseMessage = new Message[messageList.Count];
+        messageList.CopyTo(responseMessage);
+        return new MessageHandlerResult { Message = responseMessage, ShouldWait = false };
+      }
+      else
+      {
+        return new MessageHandlerResult { Message = GetSuccessfulResponse(request), ShouldWait = !isFirstConnectRequest };
+      }
+    }
+
+    private bool ClientExistsFor(Message request)
+    {
+      return request.clientId != null && clientRepository.Exists(request.clientId);
+    }
+
+    private static Message[] GetSuccessfulResponse(Message request)
+    {
+      // The connect response is documented at
+      // http://svn.cometd.com/trunk/bayeux/bayeux.html#toc_53 and
+      Message[] message = {
+              new Message
+              {
+                  id = request.id,
+                  channel = request.channel,
+                  successful = true,
+                  clientId = request.clientId,
+                  connectionType = "long-polling",
+                  advice = new Dictionary<string, int>
+                  { 
+                      { "timeout", CometHttpHandler.LongPollDuration}
+                  }
+              }
+            };
+      return message;
+    }
+
+    private static Message[] GetUnrecognisedClientResponse(Message request)
+    {
+      // The connect failed response is documented at
+      // http://svn.cometd.com/trunk/bayeux/bayeux.html#toc_53 and
+      // http://svn.cometd.com/trunk/bayeux/bayeux.html#toc_71
+      Message[] message = {
+              new Message
+              {
+                  id = request.id,
+                  channel = request.channel,
+                  successful = false,
+                  clientId = request.clientId,
+                  connectionType = "long-polling",
+                  error = "clientId not recognised",
+                  advice = new Dictionary<string, string>
+                  { 
+                      { "reconnect", "handshake" }
+                  }
+              }
+            };
+      return message;
+    }
+
+  }
+}
